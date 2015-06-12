@@ -1,0 +1,16 @@
+matrix-vector mulitplication in parallel
+****************************************
+
+This program will generate an nxm matrix and vector filled with random doubles.
+The matrix rows are passed to different processes along with the vector and multiplications are performed in parallel. Results are returned to the original process and printed there.
+This implementation uses the MPI library for message passing.
+
+build and run:
+	make
+	mpirun -np 4 ./matvec 10 10
+	(this will spawn 4 processes to handle the job, where 10 is the matrix width and height)
+
+Output: result vector.
+				result vector by different method for testing
+				if vectors match: true
+									 else: false
